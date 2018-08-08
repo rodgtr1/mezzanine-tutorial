@@ -59,3 +59,38 @@ typings/
 
 # next.js build output
 .next
+
+#mezzanine
+*.pyc
+*.pyo
+*.db
+*.pot
+*.doctree
+*.swp
+.vscode
+.doctrees
+.DS_Store
+.coverage
+.idea/
+local_settings.py
+.eggs/
+Mezzanine.egg-info/
+build/
+docs/build/
+dist/
+mezzanine/project_template/static/
+/mezzanine/.project
+/mezzanine/.pydevproject
+
+# Virtualenv
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+env
+pip-selfcheck.json
