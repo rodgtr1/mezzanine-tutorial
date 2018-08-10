@@ -81,6 +81,7 @@ dist/
 mezzanine/project_template/static/
 /mezzanine/.project
 /mezzanine/.pydevproject
+tempdrafts
 
 # Virtualenv
 .Python
