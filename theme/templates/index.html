@@ -5,8 +5,7 @@
 {% block title %}{% trans "Home" %}{% endblock %}
 
 
-{% block main %}
-
+{% block pageheader %}
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('{{STATIC_URL}}img/home-bg.jpg')">
     <div class="overlay"></div>
@@ -21,10 +20,11 @@
       </div>
     </div>
   </header>
+{% endblock %}
 
+
+{% block main %}
   <!-- Main Content -->
-    <div class="container">
-      <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
             <a href="post.html">
@@ -84,8 +84,6 @@
             <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
           </div>
         </div>
-      </div>
-    </div>
 
     <hr>
 
