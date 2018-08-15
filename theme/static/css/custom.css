@@ -1,0 +1,7 @@
+.floating-label-form-group .help-block {
+  display: none;
+}
+
+form.mezzanine-form input, form.mezzanine-form textarea {
+  width: 100%;p
+}
