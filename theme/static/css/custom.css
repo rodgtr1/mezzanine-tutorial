@@ -3,5 +3,19 @@
 }
 
 form.mezzanine-form input, form.mezzanine-form textarea {
-  width: 100%;p
+  width: 100%;
+}
+
+.site-heading .meta a {
+  color: white;
+}
+
+#comment .floating-label-form-group label {
+  opacity: 1;
+  font-size: 21px;
+  top: 0;
+}
+
+#comment .floating-label-form-group input, #comment .floating-label-form-group textarea {
+  width: 100%;
 }
