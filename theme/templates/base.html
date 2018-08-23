@@ -41,6 +41,7 @@
 {% endcompress %}
 
 {% compress js %}
+<script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
 
@@ -84,8 +85,8 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>Clean Blog</h1>
-          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          <h1>Travis Media</h1>
+          <span class="subheading">Presents a helpful Mezzanine tutorial</span>
         </div>
       </div>
     </div>
@@ -141,13 +142,12 @@
 </footer>
 
 {% block footer_js %}
-{% include "includes/footer_scripts.html" %}
 <!-- Bootstrap core JavaScript -->
-<script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
 <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
 
 <!-- Custom scripts for this template -->
 <script src="{% static "js/clean-blog.min.js" %}"></script>
+{% include "includes/footer_scripts.html" %}
 {% endblock %}
 
 </body>

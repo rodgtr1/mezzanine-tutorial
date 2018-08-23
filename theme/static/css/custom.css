@@ -19,3 +19,7 @@ form.mezzanine-form input, form.mezzanine-form textarea {
 #comment .floating-label-form-group input, #comment .floating-label-form-group textarea {
   width: 100%;
 }
+
+#mainNav.is-visible {
+  border-bottom: 3px solid black;
+}
