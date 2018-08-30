@@ -347,5 +347,5 @@ else:
 ####################
 FORMS_USE_HTML5 = True
 COMMENTS_USE_RATINGS = False
-
+BLOG_USE_FEATURED_IMAGE = True
 

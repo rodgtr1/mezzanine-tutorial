@@ -21,14 +21,20 @@
 <li class="active">{{ blog_post.title }}</li>
 {% endblock %}
 
+{% block blog_post_detail_featured_image %}
+{% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
+<p><img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 600 0 %}"></p>
+{% endif %}
+{% endblock %}
+
 {% block blogposthero %}
-<header class="masthead" style="background-image: url('{{STATIC_URL}}img/post-bg.jpg')">
+<header class="masthead" style="{% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}background-image: url('{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 1900 1069 %}'){% else %}background-image: url('{{ STATIC_URL }}img/post-bg.jpg'){% endif %}">
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-        <h1>{{ blog_post.title }}</h1>
+            <h1>{{ blog_post.title }}</h1>
         <p class="meta">
             {% trans "Posted by" %}:
             {% with blog_post.user as author %}
@@ -54,12 +60,6 @@
 {% endblock %}
 
 {% block main %}
-
-{% block blog_post_detail_featured_image %}
-{% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
-<p><img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 600 0 %}"></p>
-{% endif %}
-{% endblock %}
 
 {% if settings.COMMENTS_DISQUS_SHORTNAME %}
 {% include "generic/includes/disqus_counts.html" %}
