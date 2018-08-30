@@ -79,6 +79,7 @@ build/
 docs/build/
 dist/
 mezzanine/project_template/static/
+static/media/
 /mezzanine/.project
 /mezzanine/.pydevproject
 tempdrafts
