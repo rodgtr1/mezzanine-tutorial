@@ -82,7 +82,7 @@
     {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
         {% block blog_post_list_post_featured_image %}
         <a href="{{ blog_post.get_absolute_url }}">
-            <img class="img-thumbnail" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 800 450 %}">
+            <img class="img-thumbnail" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 800 450 %}"{% if blog_post.retina %}data-at2x="{{ MEDIA_URL }}{{ blog_post.retina }}"{% endif %}>
         </a>
         {% endblock %}
     {% endif %}
