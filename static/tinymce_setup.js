@@ -67,7 +67,7 @@
             "advlist autolink lists link image charmap print preview anchor",
             "searchreplace visualblocks code fullscreen",
             "insertdatetime media table contextmenu paste",
-            "hr"
+            "codesample"
         ],
         link_list: window.__link_list_url,
         relative_urls: false,
@@ -75,7 +75,7 @@
         convert_urls: false,
         menubar: false,
         statusbar: false,
-        toolbar1: ("insertfile undo redo | styleselect | bold italic hr | " +
+        toolbar: ("insertfile undo redo | styleselect | bold italic codesample | " +
                   "alignleft aligncenter alignright alignjustify | " +
                   "bullist numlist outdent indent | link image table | " +
                   "code fullscreen"),
