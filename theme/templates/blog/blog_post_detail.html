@@ -34,7 +34,9 @@
     <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
+            {% editable blog_post.title %}
             <h1>{{ blog_post.title }}</h1>
+            {% endeditable %}
         <p class="meta">
             {% trans "Posted by" %}:
             {% with blog_post.user as author %}
