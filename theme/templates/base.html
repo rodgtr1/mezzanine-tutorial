@@ -78,7 +78,7 @@
 {% block blogposthero %}{% endblock %}
 
 
-{% if request.path == '/' %}
+{% if request.path == '/' or '/blog/archive/' in request.path or '/blog/category/' in request.path %}
 <header class="masthead" style="background-image: url('{{STATIC_URL}}img/home-bg.jpg')">
   <div class="overlay"></div>
   <div class="container">

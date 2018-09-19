@@ -23,3 +23,11 @@ form.mezzanine-form input, form.mezzanine-form textarea {
 #mainNav.is-visible {
   border-bottom: 3px solid black;
 }
+
+.blog-filters {
+  margin-bottom: 40px;
+}
+
+.blog-filters .dropdown a {
+  display: block;
+}

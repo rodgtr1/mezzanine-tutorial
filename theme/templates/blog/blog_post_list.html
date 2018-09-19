@@ -44,6 +44,7 @@
 {% block main %}
 
 {% if tag or category or year or month or author %}
+
     {% block blog_post_list_filterinfo %}
     <p>
     {% if tag %}
@@ -70,6 +71,52 @@
     {% endblock %}
     {% endif %}
 {% endif %}
+
+{% block blog_months %}
+{% blog_months as months %}
+{% if months %}
+{% for month in months %}
+    {% ifchanged month.date.year %}
+        {% if not forloop.first %}</ul>{% endif %}
+        <div class="row blog-filters">
+            <div class="col-sm-6">
+        <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Archives
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/">All</a>     
+    {% endifchanged %}
+            <a class="dropdown-item" href="{% url "blog_post_list_month" year=month.date.year month=month.date.month %}"
+        >{{ month.date|date:"F" }} {{ month.date.year }} ({{ month.post_count }})</a> 
+    {% endfor %}
+    </div>
+</div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block blog_categories %}
+{% blog_categories as categories %}
+{% if categories %}
+<div class="col-sm-6">
+<div class="dropdown">
+    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Category
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/">All</a> 
+        {% for category in categories %}
+        <a href="{% url "blog_post_list_category" category.slug %}">
+            {{ category }} ({{ category.post_count }})
+        </a>
+        {% endfor %}
+    </div>
+</div>
+</div>
+</div>
+{% endif %}
+{% endblock %}
 
 {% for blog_post in blog_posts.object_list %}
 
