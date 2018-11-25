@@ -421,10 +421,10 @@ def secure(new_user=env.user):
     Installs system updates, creates new user (with sudo privileges) for future
     usage, and disables root login via SSH.
     """
-    run("apt-get update -q")
-    run("apt-get upgrade -y -q")
-    run("adduser --gecos '' %s" % new_user)
-    run("usermod -G sudo %s" % new_user)
+    # run("apt-get update -q")
+    # run("apt-get upgrade -y -q")
+    run("adduser %s" % new_user)
+    run("usermod -aG sudo %s" % new_user)
     run("sed -i 's:RootLogin yes:RootLogin no:' /etc/ssh/sshd_config")
     run("service ssh restart")
     print(green("Security steps completed. Log in to the server as '%s' from "
@@ -442,14 +442,14 @@ def install():
     Installs the base system and Python requirements for the entire server.
     """
     # Install system requirements
-    sudo("apt-get update -y -q")
-    apt("nginx libjpeg-dev python-dev python-setuptools git-core "
-        "postgresql libpq-dev memcached supervisor python-pip")
+    # sudo("apt-get update -y -q")
+    apt("nginx libjpeg-dev python3-dev python3-setuptools git-core "
+        "postgresql libpq-dev memcached supervisor python3-pip")
     apt('gcc rsync')
     run("mkdir -p /home/%s/logs" % env.user)
 
     # Install Python requirements
-    sudo("pip install -U pip virtualenv virtualenvwrapper mercurial")
+    # sudo("pip install -U pip virtualenv virtualenvwrapper mercurial")
 
     # Set up virtualenv
     run("mkdir -p %s" % env.venv_home)
