@@ -9,6 +9,8 @@ from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 import theme.views
 
+from cartridge.shop.views import order_history
+
 # Uncomment to use blog as home page. See also urlpatterns section below.
 from mezzanine.blog import views as blog_views
 
@@ -30,6 +32,10 @@ if settings.USE_MODELTRANSLATION:
     ]
 
 urlpatterns += [
+    # Cartridge URLs.
+    url("^shop/", include("cartridge.shop.urls")),
+    url("^account/orders/$", order_history, name="shop_order_history"),
+    
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 

@@ -83,6 +83,7 @@ static/media/
 /mezzanine/.project
 /mezzanine/.pydevproject
 tempdrafts
+requirements.txt
 
 # Virtualenv
 .Python
