@@ -10,8 +10,13 @@
 {% if field.is_hidden %}
 {{ field }}
 {% else %}
+{% if '/contact/' in request.path %}
 <div class="form-group floating-label-form-group input_{{ field.id_for_label }} {{ field.field.type }}
     {% if field.errors %} has-error{% endif %}">
+{% else %}
+<div class="form-group input_{{ field.id_for_label }} {{ field.field.type }}
+    {% if field.errors %} has-error{% endif %}">
+{% endif %}
     {% if field.label %}<label class="control-label" for="{{ field.auto_id }}">{{ field.label }}</label>{% endif %}
     {{ field }}
     {% if field.errors %}

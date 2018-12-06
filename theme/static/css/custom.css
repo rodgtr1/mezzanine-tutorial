@@ -2,6 +2,24 @@
   display: none;
 }
 
+.help-block {
+  display: none;
+}
+
+.panel.panel-default.rating {
+  clear: both;
+  padding-top: 40px;
+}
+
+ul.radio.radio-inline li {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+ul.radio.radio-inline li input {
+  margin-right: 5px;
+}
+
 form.mezzanine-form input, form.mezzanine-form textarea {
   width: 100%;
 }
