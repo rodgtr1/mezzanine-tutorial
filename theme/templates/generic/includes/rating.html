@@ -9,7 +9,7 @@
 </span>
 
 {% if not rated or request.user.is_authenticated %}
-<form class="form-inline" role="form" method="post" action="{% url "rating" %}">
+<form class="form-check form-check-inline" role="form" method="post" action="{% url "rating" %}">
     {% nevercache %}
     {% csrf_token %}
     {% endnevercache %}

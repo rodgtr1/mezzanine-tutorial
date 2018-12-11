@@ -49,3 +49,17 @@ form.mezzanine-form input, form.mezzanine-form textarea {
 .blog-filters .dropdown a {
   display: block;
 }
+
+/* Product Forms */
+form#add-cart.shop-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form#add-cart.shop-form .form-group {
+  margin-right: 30px;
+}
+
+form#add-cart.shop-form .form-actions {
+  flex-basis: 100%;
+}
