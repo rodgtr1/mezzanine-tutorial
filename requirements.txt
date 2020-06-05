@@ -6,7 +6,7 @@ certifi==2018.4.16
 cffi==1.11.5
 chardet==3.0.4
 cryptography==2.3.1
-Django==1.11.15
+Django==1.11.29
 django-contrib-comments==1.9.0
 Fabric3==1.14.post1
 filebrowser-safe==0.5.0
