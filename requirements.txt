@@ -17,7 +17,7 @@ idna==2.7
 Mezzanine==4.3.1
 oauthlib==2.1.0
 paramiko==2.4.2
-Pillow==5.2.0
+Pillow==9.0.0
 psycopg2==2.7.5
 psycopg2-binary==2.7.5
 pyasn1==0.4.4
